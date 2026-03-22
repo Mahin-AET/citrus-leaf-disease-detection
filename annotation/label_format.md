@@ -46,3 +46,5 @@ This means:
 - Annotations were reviewed to ensure consistency across classes
 
 ![Example](01.PNG)
+![Example](02.PNG)
+![Example](03.PNG)
