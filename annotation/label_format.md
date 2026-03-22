@@ -45,4 +45,4 @@ This means:
 - Bounding boxes were carefully drawn to tightly fit each leaf  
 - Annotations were reviewed to ensure consistency across classes
 
- !(annotation/01.PNG)
+![Example](01.PNG)
