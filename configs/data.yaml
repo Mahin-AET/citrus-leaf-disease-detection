@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['HLB', 'Healthy', 'Zinc deficiency']
+
+roboflow:
+  workspace: 1st-time
+  project: citrus_final
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/1st-time/citrus_final/dataset/3
