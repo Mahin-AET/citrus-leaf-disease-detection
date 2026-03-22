@@ -43,4 +43,6 @@ This means:
 
 - Each image contain one annotated leaves  
 - Bounding boxes were carefully drawn to tightly fit each leaf  
-- Annotations were reviewed to ensure consistency across classes  
+- Annotations were reviewed to ensure consistency across classes
+
+ !(annotation/01.PNG)
