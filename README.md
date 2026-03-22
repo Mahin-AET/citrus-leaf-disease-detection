@@ -19,3 +19,71 @@ As a result:
 - This increases economic loss and affects citrus production  
 
 The main objective of this project is to develop an automated system that can accurately differentiate between HLB and zinc deficiency in citrus leaves.
+
+## Dataset
+
+The dataset consists of **2421 citrus leaf images** collected from five different gardens in Sylhet, Bangladesh during 2025.
+
+### Data Split
+- Training: 1680 images (**69.4%**)  
+- Validation: 482 images (**19.9%**)  
+- Testing: 259 images (**10.7%**)  
+
+### Classes
+- Healthy  
+- Huanglongbing (HLB)  
+- Zinc Deficiency  
+
+---
+
+## Data Collection
+
+Data were collected under real field conditions using a DSLR camera during daytime with natural lighting. Images were captured at an approximate distance of **20 cm** from the leaves.
+
+To ensure consistency and reduce background noise:
+- Leaves were placed on a **uniform white board background**  
+- Each image contained **3 to 5 leaves per frame**, depending on leaf size  
+
+This multi-leaf acquisition strategy significantly improved data collection efficiency by reducing time and cost compared to capturing single leaves per image.
+
+---
+
+## Preprocessing Pipeline
+
+A multi-stage preprocessing pipeline was developed to convert raw images into model-ready samples:
+
+### Pipeline Overview
+
+Raw Image (multiple leaves)  
+→ Background Removal  
+→ Leaf Separation  
+→ Aspect Ratio Preservation  
+→ Final Dataset  
+
+---
+
+### Background Removal
+
+Background removal was performed using a color-based segmentation approach in HSV color space. A broad color range was used to detect and remove background regions, followed by morphological operations (closing, opening, erosion, dilation) to refine the leaf mask and eliminate noise.
+
+---
+
+### Leaf Separation
+
+After background removal, individual leaves were extracted using contour detection:
+
+- Contours were identified and sorted based on area  
+- Each leaf was cropped using bounding boxes with padding  
+- Noise and small artifacts were removed using area thresholding  
+
+---
+
+### Aspect Ratio Preservation
+
+Each extracted leaf was resized while preserving its original aspect ratio. The processed leaf was then placed onto a fixed-size canvas to ensure uniform input dimensions for model training.
+
+---
+
+### Annotation
+
+All processed images were annotated using **LabelImg** in YOLO format, where each image contains bounding box annotations corresponding to the target classes.
