@@ -22,17 +22,18 @@ The main objective of this project is to develop an automated system that can ac
 
 ## Dataset
 
-The dataset consists of **2421 citrus leaf images** collected from five different gardens in Sylhet, Bangladesh during 2025.
+The dataset consists of **3557 citrus leaf images** collected from five different gardens in Sylhet, Bangladesh during 2025.
 
 ### Data Split
-- Training: 1680 images (**69.4%**)  
-- Validation: 482 images (**19.9%**)  
-- Testing: 259 images (**10.7%**)  
+- Training: 2489 images (**70%**)  
+- Validation: 534 images (**15%**)  
+- Testing: 534 images (**15%**)  
 
 ### Classes
-- Healthy  
-- Huanglongbing (HLB)  
-- Zinc Deficiency  
+- Zinc Deficient  
+- Huanglongbing (HLB)
+- Healthy
+  
 
 ---
 
@@ -80,7 +81,7 @@ After background removal, individual leaves were extracted using contour detecti
 
 ### Aspect Ratio Preservation
 
-Each extracted leaf was resized while preserving its original aspect ratio. The processed leaf was then placed onto a fixed-size canvas to ensure uniform input dimensions for model training.
+Each extracted leaf was resized (4000x4000) while preserving its original aspect ratio. The processed leaf was then placed onto a fixed-size canvas to ensure uniform input dimensions for model training.
 
 ---
 
