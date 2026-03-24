@@ -58,7 +58,8 @@ A multi-stage preprocessing pipeline was developed to convert raw images into mo
 Raw Image (multiple leaves)  
 → Background Removal  
 → Leaf Separation  
-→ Aspect Ratio Preservation  
+→ Aspect Ratio Preservation
+→ Augmentation
 → Final Dataset  
 
 ---
@@ -84,6 +85,12 @@ After background removal, individual leaves were extracted using contour detecti
 Each extracted leaf was resized (4000x4000) while preserving its original aspect ratio. The processed leaf was then placed onto a fixed-size canvas to ensure uniform input dimensions for model training.
 
 ---
+
+### Data Augmentation
+
+To address the limited variation in leaf orientation within the dataset, a rotation-based augmentation strategy was applied. Since most leaves were captured in a nearly aligned position, approximately **25% of the images were randomly rotated** to introduce orientation diversity.
+
+This helped the model learn rotation-invariant features and improved robustness to variations in leaf positioning.
 
 ### Annotation
 
