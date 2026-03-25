@@ -22,12 +22,12 @@ The main objective of this project is to develop an automated system that can ac
 
 ## Dataset
 
-The dataset consists of **3557 citrus leaf images** collected from five different gardens in Sylhet, Bangladesh during 2025.
+The dataset consists of **2954 citrus leaf images** collected from five different gardens in Sylhet, Bangladesh during 2025.
 
 ### Data Split
-- Training: 2489 images (**70%**)  
-- Validation: 534 images (**15%**)  
-- Testing: 534 images (**15%**)  
+- Training: 2097 images (**70%**)  
+- Validation: 591 images (**20%**)  
+- Testing: 296 images (**10%**)  
 
 ### Classes
 - Zinc Deficient  
