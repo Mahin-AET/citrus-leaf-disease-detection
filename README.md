@@ -5,7 +5,9 @@ Deep learning-based differentiation of HLB and zinc deficiency in citrus leaves 
 
 Citrus production in Sylhet, Bangladesh is affected by both Huanglongbing (HLB) and zinc deficiency. These two conditions often exhibit visually similar symptoms on leaves, making manual diagnosis difficult for farmers. Misidentification can lead to incorrect treatment decisions and reduced crop yield.
 
-This project proposes a deep learning-based approach to automatically classify citrus leaves into Healthy, HLB, and Zinc Deficiency categories using field-collected data.
+## Objectives 
+- to automatically differentiate citrus leaves into Healthy, HLB, and Zinc Deficiency categories using field-collected data.
+- to benchmark a recent transformer-based detector (DEIM D-FINE DETRn) against YOLOv8n.
 
 ---
 
@@ -95,3 +97,14 @@ This helped the model learn rotation-invariant features and improved robustness 
 ### Annotation
 
 All processed images were annotated using **LabelImg** in YOLO format, where each image contains bounding box annotations corresponding to the target classes.
+
+## Training
+Yolov8n: epochs= 60 (best=60, img_size = 640, parameters= 3m
+DEIM-Dfine-DETRn: epochs= 35 (best=29), img_size= 640, pamameters = 3.7m
+
+## Result and Discussion
+Even with only 29 training epochs, the DEIM D-FINE DETR model outperformed YOLOv8n, achieving mAP@50 = 0.989 and mAP@50–95 = 0.982, compared to 0.987 and 0.95 respectively for YOLOv8n. This indicates significantly faster convergence and better generalization. The improved performance can be attributed to the transformer’s global attention mechanism, which captures subtle spatial patterns between visually similar classes such as HLB and zinc deficiency. Additionally, the DEIM framework accelerates training by introducing a dense one-to-one matching strategy and a matchability-aware loss, increasing effective supervision and improving optimization efficiency. These results highlight the advantage of modern DETR variants for fine-grained agricultural disease detection.
+
+
+
+
