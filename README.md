@@ -24,7 +24,7 @@ The main objective of this project is to develop an automated system that can ac
 
 ## Dataset
 
-The dataset consists of **2954 citrus leaf images** collected from five different gardens in Sylhet, Bangladesh during 2025.
+The dataset consists of **2954 citrus leaf images**.
 
 ### Data Split
 - Training: 2097 images (**70%**)  
