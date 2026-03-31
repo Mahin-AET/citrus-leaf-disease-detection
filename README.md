@@ -105,13 +105,12 @@ DEIM-Dfine-DETRn: epochs= 35 (best=29), img_size= 640, pamameters = 3.7m
 ## Result and Discussion
 Even with only 29 training epochs, the DEIM D-FINE DETR model outperformed YOLOv8n, achieving mAP@50 = 0.989 and mAP@50–95 = 0.982, compared to 0.987 and 0.95 respectively for YOLOv8n. This indicates significantly faster convergence and better generalization. The improved performance can be attributed to the transformer’s global attention mechanism, which captures subtle spatial patterns between visually similar classes such as HLB and zinc deficiency. Additionally, the DEIM framework accelerates training by introducing a dense one-to-one matching strategy and a matchability-aware loss, increasing effective supervision and improving optimization efficiency. These results highlight the advantage of modern DETR variants for fine-grained agricultural disease detection.
 
-<p align="center">
-  <img src="assets/DEIM_convergence.jpg" width="45%" height="50%" />
-  <img src="assets/yolo_convergence.png" width="45%" height="50%" />
-</p>
+### Convergence Comparison
 
-<p align="center">
-  <b>Left:</b> DEIM D-FINE DETR &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; <b>Right:</b> YOLOv8n
-</p>
+**DEIM D-FINE DETR**
+![DETR](assets/DEIM_convergence.jpg)
+
+**YOLOv8n**
+![YOLO](assets/yolo_convergence.png)
 
 
