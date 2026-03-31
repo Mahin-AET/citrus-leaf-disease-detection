@@ -1,4 +1,4 @@
-# citrus-leaf-disease-detection
+# Transformer vs CNN for Citrus Disease Detection (YOLOv8 vs DETR Benchmark)
 Deep learning-based differentiation of HLB and zinc deficiency in citrus leaves (Sylhet dataset)
 
 ## Introduction
